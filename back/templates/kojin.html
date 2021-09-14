@@ -42,8 +42,8 @@
               {% for kyotsuSetsumei in kyotsuSetsumeis %}
               <div class="d-flex text-muted pt-3 border-bottom">
                 <p class="pb-3 mb-0 small lh-sm">
-                  <strong class="d-block text-gray-dark">{% kyotsuKoumokumei %}</strong>
-                  {% kyotsuSetsumei %}
+                  <strong class="d-block text-gray-dark">{{ kyotsuKoumokumei }}</strong>
+                  {{ kyotsuSetsumei }}
                 </p>
               </div>
               {% endfor %}
@@ -56,8 +56,8 @@
                 {% for kyotsuSetsumei in hikyotsuSetsumeis %}
                 <div class="d-flex text-muted pt-3 border-bottom">
                   <p class="pb-3 mb-0 small lh-sm">
-                    <strong class="d-block text-gray-dark">{% kyotsuKoumokumei %}</strong>
-                    {% kyotsuSetsumei %}
+                    <strong class="d-block text-gray-dark">{{ kyotsuKoumokumei }}</strong>
+                    {{ kyotsuSetsumei }}
                   </p>
                 </div>
                 {% endfor %}
