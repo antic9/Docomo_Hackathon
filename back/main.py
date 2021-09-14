@@ -61,6 +61,7 @@ def index():
     user = cursor.fetchall()
     cursor.close()
     connection.close()
+    print(passw)
     if(password==passw):
         return render_template('mypage.html', users = user)
     else:
