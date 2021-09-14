@@ -120,7 +120,7 @@ class compare_info:
     common_hb = []
     not_common_hb = []
 
-    usernames = [username1, username2]
+    usernames = (username1, username2)
     connection = getConnection()
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM user WHERE usename=? OR usename=?", usernames)
