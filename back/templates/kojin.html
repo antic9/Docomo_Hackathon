@@ -38,25 +38,29 @@
             <div class="my-3 p-3 bg-white rounded shadow-sm">
               <h6 class="border-bottom pb-2 mb-0">共通項</h6>
 
-              {% for kyotsu in kyotsus %}
+              {% for kyotsuKoumokumei in kyotsuKoumokumeis %}
+              {% for kyotsuSetsumei in kyotsuSetsumeis %}
               <div class="d-flex text-muted pt-3 border-bottom">
                 <p class="pb-3 mb-0 small lh-sm">
-                  <strong class="d-block text-gray-dark">{% kyotsu.koumokumei %}</strong>
-                  {% kyotsu.setsumei %}
+                  <strong class="d-block text-gray-dark">{% kyotsuKoumokumei %}</strong>
+                  {% kyotsuSetsumei %}
                 </p>
               </div>
+              {% endfor %}
               {% endfor %}
 
               <div class="my-3 p-3 bg-white rounded shadow-sm">
                 <h6 class="border-bottom pb-2 mb-0">非共通項</h6>
 
-                {% for hikyotsu in hikyotsus %}
+                {% for kyotsuKoumokumei in kyotsuKoumokumeis %}
+                {% for kyotsuSetsumei in kyotsuSetsumeis %}
                 <div class="d-flex text-muted pt-3 border-bottom">
                   <p class="pb-3 mb-0 small lh-sm">
-                    <strong class="d-block text-gray-dark">{% hikyotsu.koumokumei %}</strong>
-                    {% hikyotsu.setsumei %}
+                    <strong class="d-block text-gray-dark">{% kyotsuKoumokumei %}</strong>
+                    {% kyotsuSetsumei %}
                   </p>
                 </div>
+                {% endfor %}
                 {% endfor %}
               </div>
           </div>
