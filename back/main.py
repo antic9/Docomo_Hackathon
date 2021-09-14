@@ -1,7 +1,8 @@
 from flask import Flask, redirect, render_template, request,url_for, jsonify
 import pymysql
 import json
-
+from compare import compare_info
+com = compare_info()
 app = Flask(__name__, static_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Kyotsuu5@18.222.210.94/Docomo_Hackathon?charset=utf8'
 # db = SQLAlchemy(app)
@@ -19,19 +20,21 @@ def getConnection():
 
 # class DATABASENAME(db.Model):
 #   __tablename__ = 'DATABASENAME'
-@app.route('/<username>/login', methods = ['GET', 'POST'])
+@app.route('/<username>/logingin', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
-    sql = "SELECT * FROM user where usename=%s"
-    cursor = connection.cursor()
-    cursor.execute(sql,(username))
-    user = cursor.fetchall()
-    name = cursor.fetchall()
+    myusername = request.form["username"]
+    common, not_common = com.compare(myusername,username)
+    # sql = "SELECT * FROM user where usename=%s"
+    # cursor = connection.cursor()
+    # cursor.execute(sql,(username))
+    # user = cursor.fetchall()
+    # name = cursor.fetchall()
     common = {
         'koumokumei':koumokumei,
         'setsumei':setumeibun
     }
-    uncommon = {
+    not_common = {
         'koumokumei':koumokumei,
         'setsumei':setumeibun
     }
