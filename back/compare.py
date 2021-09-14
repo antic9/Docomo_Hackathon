@@ -130,7 +130,8 @@ class compare_info:
     cursor.close()
     print(user)
     for i in range(len(user[0])):
-      print(user[0].keys()[i])
+      keys = user[0].keys()
+      print(keys[i])
       # hobby
       if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
         b_len = len(common_hb)
