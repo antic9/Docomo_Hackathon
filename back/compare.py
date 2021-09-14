@@ -130,20 +130,28 @@ class compare_info:
     cursor.close()
     print(user)
     for i in range(len(user[0])):
-      keys = list(user[0].keys())
-      print(keys)
+      keys1 = list(user[0].keys())
+      keys2 = list(user[1].keys())
+
+    
       print(type(keys))
 
       # hobby
-      if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
+      if i<=12 and i>=14:
         b_len = len(common_hb)
         for j in range(len(user[0])):
-          if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
-            if user[0].keys()[i] == user[0].keys()[j]:
-              common_hb.append(user[0][j])
+          if j<=12 and j>=14:
+            if user[0][keys1[i]] == user[1][keys2[j]]:
+              common_hb.append(user[0][keys1[i]])
+              keys1.pop(i)
+              keys2.pop(j)
+        for k in range(len(keys1)):    
+          not_common_hb.append(user[0][keys1[k]])
+          not_common_hb.append(user[1][keys2[i]])
+      print(common_hb)
+      print(not_common_hb)
 
-        if len(common_hb) == b_len:
-          not_common_hb.append(user[0][i])
+
 
       # other
       else:
