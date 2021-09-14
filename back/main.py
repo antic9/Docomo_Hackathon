@@ -30,7 +30,7 @@ def login(username):
     # cursor.execute(sql,(username))
     # user = cursor.fetchall()
     # name = cursor.fetchall()
-    render_template('kojin.html', kyotsus=common, hikyoutsuus=not_common)
+    render_template('kojin.html', name = username, kyotsus=common, hikyoutsuus=not_common)
 
 @app.route('/')
 def redirect_share_login():
