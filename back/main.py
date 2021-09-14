@@ -20,7 +20,7 @@ def getConnection():
 
 # class DATABASENAME(db.Model):
 #   __tablename__ = 'DATABASENAME'
-@app.route('/<username>/logingin', methods = ['GET', 'POST'])
+@app.route('/logingin/<username>', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
     myusername = request.form["username"]
@@ -35,7 +35,7 @@ def login(username):
 @app.route('/')
 def redirect_share_login():
     return render_template('login.html')
-@app.route('/<username>/login')
+@app.route('/login/<username>')
 def redirect_login():
     return render_template('login.html')
 
@@ -74,7 +74,7 @@ def index():
     if(len(user)!=0):
         return render_template('mypage.html', users = user)
     else:
-        return render_template('login.html', users = user)
+        return render_template('login.html')
 
         # return redirect(url_for('return_login'))
 
