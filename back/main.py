@@ -1,7 +1,8 @@
-from flask import Flask, redirect, render_template, request,url_for
+from flask import Flask, redirect, render_template, request,url_for, jsonify
 import pymysql
+import json
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Kyotsuu5@18.222.210.94/Docomo_Hackathon?charset=utf8'
 # db = SQLAlchemy(app)
 # engine = create_engine('mysql+pymysql://root:Kyotsuu5@18.222.210.94/Docomo_Hackathon?charset=utf8')
@@ -69,7 +70,7 @@ def index():
     print(user)
     print(len(user))
     if(len(user)!=0):
-        return render_template('mypage.html', users = user)
+        return render_template('mypage.html', users = user), jsonify(user_info = json.dumps(user))
     else:
         return render_template('login.html', users = user)
 
@@ -78,3 +79,5 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
+    app.debug = True
+
