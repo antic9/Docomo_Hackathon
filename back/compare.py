@@ -121,6 +121,8 @@ class compare_info:
     not_common_hb = []
 
     usernames = (username1, username2)
+    print(username1)
+    print(username2)
     connection = getConnection()
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
