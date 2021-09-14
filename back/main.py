@@ -1,4 +1,4 @@
-from flask import Flask, redirect, render_template, request
+from flask import Flask, redirect, render_template, request,url_for
 import pymysql
 
 app = Flask(__name__)
@@ -36,20 +36,32 @@ def login(username):
     }
     render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
+@app.route('/')
+def return_login():
+    return render_template('login.html')
+
 @app.route('/login')
 def return_login():
     return render_template('login.html')
-@app.route('/login', methods = ['GET', 'POST'])
+
+@app.route('/logingin', methods = ['GET', 'POST'])
 def index():
     print("connected")
     connection = getConnection()
-    message = "Successfully Connected to SQL"
-    request.form["username"]
-    sql = "SELECT * FROM user"
+    username=request.form["username"]
+    password=request.form["password"]
+    
+    sql = "SELECT password FROM user where userid="+username
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    passw = cursor.fetchall()
+    sql = "SELECT * FROM user where userid="+username
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
-
     cursor.close()
     connection.close()
-    return render_template('mypage.html', users = user)
+    if(password==passw):
+        return render_template('mypage.html', users = user)
+    else:
+        return redirect(url_for('return_login'))
