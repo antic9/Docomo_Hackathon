@@ -42,7 +42,7 @@ def redirect_login():
 
 @app.route('/login')
 def return_login():
-    return redirect(url_for('return_login'))
+    return render_template('login.html')
 
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
