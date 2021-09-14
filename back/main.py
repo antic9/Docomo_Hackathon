@@ -25,11 +25,7 @@ def login(username):
     connection = getConnection()
     myusername = request.form["username"]
     common, not_common = com.compare(myusername,username)
-    # sql = "SELECT * FROM user where usename=%s"
-    # cursor = connection.cursor()
-    # cursor.execute(sql,(username))
-    # user = cursor.fetchall()
-    # name = cursor.fetchall()
+    print(common)
     render_template('kojin.html', name = username, kyotsus=common, hikyoutsuus=not_common)
 
 @app.route('/')
