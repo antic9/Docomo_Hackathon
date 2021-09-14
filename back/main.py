@@ -57,6 +57,7 @@ def index():
     # passw = cursor.fetchall()
     sql = "SELECT * FROM user where usename=%s AND password = %s"
     cursor = connection.cursor()
+    print(sql)
     cursor.execute(sql,(username,password))
     user = cursor.fetchall()
     exist = len(cursor.fetchall())
@@ -68,7 +69,7 @@ def index():
     if(exist!=0):
         return render_template('mypage.html', users = user)
     else:
-        return render_template('mypage.html', users = user)
+        return render_template('login.html', users = user)
 
         # return redirect(url_for('return_login'))
 
