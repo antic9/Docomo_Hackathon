@@ -24,6 +24,7 @@
           </nav>
     </header>
     <main class="text-center">
+      {{message}}
       <div class="w-100 abst m-auto" style="max-width: 500px;">
         <form class="bg-white rounded shadow-sm p-5" method="POST"action="logingin">
           <h1 class="h3 mb-3 fw-normal">サインイン</h1>
@@ -33,7 +34,6 @@
           <input type="password" id="inputPassword" name="password" class="form-control" placeholder="パスワード" required="">
           <button class="w-100 btn btn-lg btn-primary" id="SignIn" type="submit">サインイン</button>
         </form>
-        {{message}}
       </div>
     </main>
     <footer class="footer mt-auto py-4 bg-light">
