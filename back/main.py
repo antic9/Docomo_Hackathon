@@ -72,7 +72,7 @@ def index():
     print((user))
     # del user['enter_date']
     if(len(user)!=0):
-        return render_template('mypage.html', users = user)
+        return render_template('mypage.html', users = user_info)
     else:
         return render_template('login.html')
 
