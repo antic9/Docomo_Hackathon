@@ -62,10 +62,11 @@ def index():
     cursor.close()
     connection.close()
     print(passw)
-    if(password==passw):
-        return render_template('mypage.html', users = user)
-    else:
-        return redirect(url_for('return_login'))
+    return render_template('login.html')
+    # if(password==passw):
+    #     return render_template('mypage.html', users = user)
+    # else:
+    #     return redirect(url_for('return_login'))
 
 
 if __name__ == '__main__':
