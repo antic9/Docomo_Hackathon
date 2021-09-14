@@ -24,7 +24,11 @@
           </nav>
     </header>
     <main class="text-center">
-      {{message}}
+      {% if len(message) != 0 %}
+      <div class="alert alert-danger" role="alert">
+        {{message}}
+      </div>
+      {% endif %}
       <div class="w-100 abst m-auto" style="max-width: 500px;">
         <form class="bg-white rounded shadow-sm p-5" method="POST"action="logingin">
           <h1 class="h3 mb-3 fw-normal">サインイン</h1>
