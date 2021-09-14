@@ -36,17 +36,19 @@ def login(username):
     }
     render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
+@app.route('/login')
+def return_login():
+    return render_template('login.html')
 @app.route('/login', methods = ['GET', 'POST'])
 def index():
     print("connected")
     connection = getConnection()
     message = "Successfully Connected to SQL"
-
+    request.form["username"]
     sql = "SELECT * FROM user"
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
-
 
     cursor.close()
     connection.close()
