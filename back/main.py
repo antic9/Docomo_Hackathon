@@ -51,23 +51,23 @@ def index():
     username=request.form["username"]
     password=request.form["password"]
     print(username)
-    sql = "SELECT password FROM user where usename=%s"
+    # sql = "SELECT password FROM user where usename=%s AND password = %s"
+    # cursor = connection.cursor()
+    # cursor.execute(sql,(username,password))
+    # passw = cursor.fetchall()
+    sql = "SELECT * FROM user where usename=%s AND password = %s"
     cursor = connection.cursor()
-    cursor.execute(sql,(username))
-    passw = cursor.fetchall()
-    sql = "SELECT * FROM user where usename=%s"
-    cursor = connection.cursor()
-    cursor.execute(sql,(username))
+    cursor.execute(sql,(username,password))
     user = cursor.fetchall()
+    exist = len(cursor.fetchall())
     cursor.close()
     connection.close()
-    print(passw)
+    # print(passw)
     print(user)
-    return render_template('login.html')
-    # if(password==passw):
-    #     return render_template('mypage.html', users = user)
-    # else:
-    #     return redirect(url_for('return_login'))
+    if(exist!=0):
+        return render_template('mypage.html', users = user)
+    else:
+        return redirect(url_for('return_login'))
 
 
 if __name__ == '__main__':
