@@ -56,7 +56,7 @@ def index():
     # cursor = connection.cursor()
     # cursor.execute(sql,(username,password))
     # passw = cursor.fetchall()
-    sql = "SELECT * FROM user where usename=%s AND password = %s"
+    sql = "SELECT * FROM user where usename=%s AND password=%s"
     cursor = connection.cursor()
     print(sql)
     cursor.execute(sql,(username,password))
