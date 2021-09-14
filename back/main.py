@@ -68,7 +68,9 @@ def index():
     if(exist!=0):
         return render_template('mypage.html', users = user)
     else:
-        return redirect(url_for('return_login'))
+        return render_template('mypage.html', users = user)
+
+        # return redirect(url_for('return_login'))
 
 
 if __name__ == '__main__':
