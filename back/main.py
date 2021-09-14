@@ -21,7 +21,7 @@ def getConnection():
 @app.route('/<username>', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
-    sql = "SELECT name FROM user WHERE usename ="+username
+    sql = "SELECT name FROM user WHERE usename ={username}"
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
@@ -51,17 +51,18 @@ def index():
     username=request.form["username"]
     password=request.form["password"]
     
-    sql = "SELECT password FROM user where usename="+username
+    sql = "SELECT password FROM user where usename={username}"
     cursor = connection.cursor()
     cursor.execute(sql)
     passw = cursor.fetchall()
-    sql = "SELECT * FROM user where usename="+username
+    sql = "SELECT * FROM user where usename={username}"
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
     cursor.close()
     connection.close()
     print(passw)
+    print(user)
     return render_template('login.html')
     # if(password==passw):
     #     return render_template('mypage.html', users = user)
