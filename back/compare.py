@@ -12,7 +12,6 @@
 from flask import Flask, redirect, render_template, request,url_for, jsonify
 import pymysql
 import json
-from compare import compare_info
 import re
 def getConnection():
     connection = pymysql.connect(
