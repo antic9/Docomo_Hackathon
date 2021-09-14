@@ -20,7 +20,7 @@ def compare(username1, username2, connection):
 
   usernames = [username1, username2]
   cursor = connection.cursor()
-  cursor.execute("SELECT * FROM user WHERE username=? OR username=?", usernames)
+  cursor.execute("SELECT * FROM user WHERE usename=? OR usename=?", usernames)
   user = cursor.fetchall()
   cursor.close()
 
