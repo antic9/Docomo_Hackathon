@@ -130,7 +130,7 @@ class compare_info:
     cursor.close()
     print(user)
     for i in range(len(user[0])):
-      keys = user[0].keys()
+      keys = list(user[0].keys())
       print(keys)
       print(type(keys))
 
