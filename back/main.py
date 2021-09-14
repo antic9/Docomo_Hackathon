@@ -36,7 +36,7 @@ def login(username):
 def redirect_share_login():
     return render_template('login.html')
 @app.route('/login/<username>')
-def redirect_login():
+def redirect_login(username):
     return render_template('login.html')
 
 @app.route('/login')
