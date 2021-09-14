@@ -30,17 +30,12 @@ def login(username):
     # cursor.execute(sql,(username))
     # user = cursor.fetchall()
     # name = cursor.fetchall()
-    common = {
-        'koumokumei':koumokumei,
-        'setsumei':setumeibun
-    }
-    not_common = {
-        'koumokumei':koumokumei,
-        'setsumei':setumeibun
-    }
     render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
 @app.route('/')
+def redirect_share_login():
+    return render_template('login.html')
+@app.route('/<username>/login')
 def redirect_login():
     return render_template('login.html')
 
