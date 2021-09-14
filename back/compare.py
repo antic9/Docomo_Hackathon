@@ -120,7 +120,7 @@ class compare_info:
     common_hb = []
     not_common_hb = []
 
-    usernames = (username1, username2)
+    usernames = (username1,username2)
     print(username1)
     print(username2)
     connection = getConnection()
@@ -130,13 +130,13 @@ class compare_info:
     cursor.close()
     print(user)
     for i in range(len(user[0])):
-
+      print(user[0].keys()[i])
       # hobby
-      if re.compile(r'^hobby').search(user[0].keys()[i]):
+      if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
         b_len = len(common_hb)
         for j in range(len(user[0])):
-          if re.compile(r'^hobby').search(user[0].keys()[j]):
-            if user[0][i] == user[0][j]:
+          if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
+            if user[0].keys()[i] == user[0].keys()[j]:
               common_hb.append(user[0][j])
 
         if len(common_hb) == b_len:
@@ -145,9 +145,9 @@ class compare_info:
       # other
       else:
         if user[0][i] == user[0][i]:
-          common[user[0].keys()[i]] = user[0][i]
+          common[user[0].keys()[i]] = user[1][i]
         else:
-          not_common[user[0].keys()[i]] = user[0][i]
+          not_common[user[0].keys()[i]] = user[1][i]
 
     common['hobby'] = common_hb
     not_common['hobby'] = not_common_hb
