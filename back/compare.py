@@ -9,7 +9,10 @@
 # persons = [(1, 'takahashi', '高橋芳樹', '滋賀県', '車', 'キャンプ', 'demo'), (2, 'tanaka', '田中百合', '滋賀県', 'キャンプ', '車', 'demo1'), (3, 'demo', 'デモ', 'demo', 'demo', 'demo', 'demo')]
 # cursor.executemany("INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?)", persons)
 ################################
-
+from flask import Flask, redirect, render_template, request,url_for, jsonify
+import pymysql
+import json
+from compare import compare_info
 import re
 def getConnection():
     connection = pymysql.connect(
