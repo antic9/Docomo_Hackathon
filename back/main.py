@@ -24,27 +24,45 @@ def getConnection():
 def login(username):
     connection = getConnection()
     myusername = request.form["username"]
-    common, not_common = com.compare(myusername,username)
-    print(common)
-    print(not_common)
-    kyotsuKoumokumeis = common['koumokumei']
-    kyotsuSetsumeis = common['setsumei']
-    hikyotsuKoumokumeis = not_common['koumokumei']
-    hikyotsuSetsumeis = not_common['setsumei']
+    password = request.form["password"]
+    sql = "SELECT * FROM user where usename=%s AND password=%s"
+    cursor = connection.cursor()
+    print(sql)
+    cursor.execute(sql,(myusername,password))
+    user = cursor.fetchall()
+    exist = len(cursor.fetchall())
+    cursor.close()
+    connection.close()
+    if (len(user)==0):
+        return render_template('login.html',message="wrong username or password")
+    else:
+        if username == myusername:
+            return render_template('login.html',message="同一ユーザです")
+        else:
+            common, not_common = com.compare(myusername,username)
+            print(common)
+            print(not_common)
+            kyotsuKoumokumeis = common['koumokumei']
+            kyotsuSetsumeis = common['setsumei']
+            hikyotsuKoumokumeis = not_common['koumokumei']
+            hikyotsuSetsumeis = not_common['setsumei']
+            return render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
 
 
-    return render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
+    
 
 @app.route('/')
 def redirect_share_login():
-    return render_template('login.html')
+    return render_template('login.html',message="")
+
 @app.route('/<username>/login')
 def redirect_login(username):
-    return render_template('login.html')
+    return render_template('login.html',message="")
+
 
 @app.route('/login')
 def return_login():
-    return render_template('login.html')
+    return render_template('login.html',message="")
 
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
@@ -78,7 +96,7 @@ def index():
         print((user))
         return render_template('mypage.html', users = user_info)
     else:
-        return render_template('login.html')
+        return render_template('login.html',message="wrong username or password")
 
         # return redirect(url_for('return_login'))
 
