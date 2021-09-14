@@ -131,7 +131,7 @@ class compare_info:
     print(user)
     for i in range(len(user[0])):
       keys = user[0].keys()
-      print(keys[i])
+      print(keys)
       # hobby
       if user[0].keys()[i]<=12 and user[0].keys()[i]>=14:
         b_len = len(common_hb)
