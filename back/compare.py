@@ -123,7 +123,7 @@ class compare_info:
     usernames = (username1, username2)
     connection = getConnection()
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM user WHERE usename=? OR usename=?", usernames)
+    cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
     user = cursor.fetchall()
     cursor.close()
 
