@@ -130,22 +130,22 @@ class compare_info:
     for i in range(len(user[0])):
 
       # hobby
-      if re.compile(r'^hobby').search(user[1].keys()[i]):
+      if re.compile(r'^hobby').search(user[0].keys()[i]):
         b_len = len(common_hb)
         for j in range(len(user[0])):
           if re.compile(r'^hobby').search(user[0].keys()[j]):
-            if user[1][i] == user[0][j]:
+            if user[0][i] == user[0][j]:
               common_hb.append(user[0][j])
 
         if len(common_hb) == b_len:
-          not_common_hb.append(user[1][i])
+          not_common_hb.append(user[0][i])
 
       # other
       else:
-        if user[1][i] == user[0][i]:
+        if user[0][i] == user[0][i]:
           common[user[0].keys()[i]] = user[0][i]
         else:
-          not_common[user[0].keys()[i]] = user[1][i]
+          not_common[user[0].keys()[i]] = user[0][i]
 
     common['hobby'] = common_hb
     not_common['hobby'] = not_common_hb
