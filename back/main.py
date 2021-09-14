@@ -26,7 +26,13 @@ def login(username):
     myusername = request.form["username"]
     common, not_common = com.compare(myusername,username)
     print(common)
-    render_template('kojin.html', name = username, kyotsus=common, hikyoutsuus=not_common)
+    kyotsuKoumokumeis = common['koumokumei']
+    kyotsuSetsumeis = common['setumei']
+    hikyotsuKoumokumeis = not_common['koumokumei']
+    hikyotsuSetsumeis = not_common['setumei']
+
+
+    render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
 
 @app.route('/')
 def redirect_share_login():
