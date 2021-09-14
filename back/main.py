@@ -18,8 +18,25 @@ def getConnection():
 
 # class DATABASENAME(db.Model):
 #   __tablename__ = 'DATABASENAME'
+@app.route('/<username>', methods = ['GET', 'POST'])
+def login(username):
+    connection = getConnection()
+    sql = "SELECT name FROM user WHERE userid ="+username
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    user = cursor.fetchall()
+    name = cursor.fetchall()
+    common = {
+        'koumokumei':koumokumei,
+        'setsumei':setumeibun
+    }
+    uncommon = {
+        'koumokumei':koumokumei,
+        'setsumei':setumeibun
+    }
+    render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/login', methods = ['GET', 'POST'])
 def index():
     print("connected")
     connection = getConnection()
@@ -30,6 +47,7 @@ def index():
     cursor.execute(sql)
     user = cursor.fetchall()
 
+
     cursor.close()
     connection.close()
-    return render_template('index_test_flask_base.html', message = message, users = user)
+    return render_template('mypage.html', users = user)
