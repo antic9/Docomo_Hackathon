@@ -33,7 +33,7 @@ def login(username):
     hikyotsuSetsumeis = not_common['setsumei']
 
 
-    render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
+    return render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
 
 @app.route('/')
 def redirect_share_login():
