@@ -126,7 +126,7 @@ class compare_info:
     cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
     user = cursor.fetchall()
     cursor.close()
-
+    print(user)
     for i in range(len(user[0])):
 
       # hobby
