@@ -5,6 +5,15 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = ''
 db = SQLAlchemy(app)
 
+dns = {
+    'user': 'root',
+    'host': '18.222.210.94', # 各自設定
+    'port':'3306',
+    'password': 'Kyotsuu5', # 各自設定
+    'database': 'Docomo_Hackathon' # 各自設定
+}
+
+
 class DATABASENAME(db.Model):
   __tablename__ = 'DATABASENAME'
 
