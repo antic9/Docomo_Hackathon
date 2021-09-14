@@ -50,7 +50,7 @@ def index():
     connection = getConnection()
     username=request.form["username"]
     password=request.form["password"]
-    
+    print(username)
     sql = "SELECT password FROM user where usename={}".format(username)
     cursor = connection.cursor()
     cursor.execute(sql)
