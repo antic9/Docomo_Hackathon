@@ -67,7 +67,7 @@ def index():
     connection.close()
     # print(passw)
     print(user)
-    print(exist)
+    print(len(user))
     if(exist!=0):
         return render_template('mypage.html', users = user)
     else:
