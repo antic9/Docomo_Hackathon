@@ -5,7 +5,7 @@
 # connection.row_factory = sqlite3.Row
 # cursor = connection.cursor()
 # cursor.execute("DROP TABLE user")
-# cursor.execute("CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, username TEXT, name TEXT, birthplace TEXT, hobby1 TEXT, hobby2 TEXT, hobby3 TEXT)")
+# cursor.execute("CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, usename TEXT, name TEXT, birthplace TEXT, hobby1 TEXT, hobby2 TEXT, hobby3 TEXT)")
 # persons = [(1, 'takahashi', '高橋芳樹', '滋賀県', '車', 'キャンプ', 'demo'), (2, 'tanaka', '田中百合', '滋賀県', 'キャンプ', '車', 'demo1'), (3, 'demo', 'デモ', 'demo', 'demo', 'demo', 'demo')]
 # cursor.executemany("INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?)", persons)
 ################################
