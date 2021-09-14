@@ -37,13 +37,13 @@ def login(username):
     render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
 @app.route('/')
-def return_login():
+def redirect_login():
     return render_template('login.html')
 
 @app.route('/login')
 def return_login():
-    return render_template('login.html')
-
+    return redirect(url_for('return_login'))
+    
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
     print("connected")
