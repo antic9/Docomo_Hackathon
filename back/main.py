@@ -28,9 +28,9 @@ def login(username):
     print(common)
     print(not_common)
     kyotsuKoumokumeis = common['koumokumei']
-    kyotsuSetsumeis = common['setumei']
+    kyotsuSetsumeis = common['setsumei']
     hikyotsuKoumokumeis = not_common['koumokumei']
-    hikyotsuSetsumeis = not_common['setumei']
+    hikyotsuSetsumeis = not_common['setsumei']
 
 
     render_template('kojin.html', name = username, kyotsuKoumokumeis = kyotsuKoumokumeis,kyotsuSetsumeis=kyotsuSetsumeis, hikyotsuKoumokumeis=hikyotsuKoumokumeis,hikyotsuSetsumeis=hikyotsuSetsumeis)
