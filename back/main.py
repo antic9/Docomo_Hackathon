@@ -18,7 +18,7 @@ def getConnection():
 
 # class DATABASENAME(db.Model):
 #   __tablename__ = 'DATABASENAME'
-@app.route('/<username>', methods = ['GET', 'POST'])
+@app.route('/<username>/login', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
     sql = "SELECT * FROM user where usename=%s"
