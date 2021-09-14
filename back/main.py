@@ -33,7 +33,7 @@ def login(username):
     render_template('kojin.html', name=name, kyotsus=common, hikyoutsuus=uncommon)
 
 @app.route('/')
-def redirect_login():
+def redirect_share_login():
     return render_template('login.html')
 @app.route('/<username>/login')
 def redirect_login():
