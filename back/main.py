@@ -43,7 +43,7 @@ def redirect_login():
 @app.route('/login')
 def return_login():
     return redirect(url_for('return_login'))
-    
+
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
     print("connected")
@@ -65,3 +65,7 @@ def index():
         return render_template('mypage.html', users = user)
     else:
         return redirect(url_for('return_login'))
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
