@@ -148,8 +148,8 @@ class compare_info:
         for k in range(len(keys1)):    
           not_common_hb.append(user[0][keys1[k]])
           not_common_hb.append(user[1][keys2[i]])
-      print(common_hb)
-      print(not_common_hb)
+        print(common_hb)
+        print(not_common_hb)
 
 
 
