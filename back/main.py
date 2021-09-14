@@ -71,7 +71,9 @@ def index():
     connection.close()
     # print(passw)
     print(user)
-    print(len(user))
+    user_info=user[1]
+    user_info['share_url']="http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + user["usename"] + "/login"
+    print((user))
     # del user['enter_date']
     if(len(user)!=0):
         return render_template('mypage.html', users = user)
