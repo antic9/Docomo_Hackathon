@@ -73,7 +73,7 @@ def index():
     print(user)
     user_info=user[0]
     print(user_info)
-    user_info['share_url']="http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + user["usename"] + "/login"
+    user_info['share_url']="http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + user_info["usename"] + "/login"
     print((user))
     # del user['enter_date']
     if(len(user)!=0):
