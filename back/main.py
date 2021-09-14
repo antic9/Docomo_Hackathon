@@ -21,7 +21,7 @@ def getConnection():
 @app.route('/<username>', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
-    sql = "SELECT name FROM user WHERE usename ={}".format(username)
+    sql = "SELECT name FROM user WHERE userid ="+username
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
@@ -50,29 +50,23 @@ def index():
     connection = getConnection()
     username=request.form["username"]
     password=request.form["password"]
-    print(username)
-    print(password)
-    # sql = "SELECT password FROM user where usename=%s AND password = %s"
-    # cursor = connection.cursor()
-    # cursor.execute(sql,(username,password))
-    # passw = cursor.fetchall()
-    sql = "SELECT * FROM user where usename=%s AND password=%s"
+    
+    sql = "SELECT password FROM user where username="+username
     cursor = connection.cursor()
-    print(sql)
-    cursor.execute(sql,(username,password))
+    cursor.execute(sql)
+    passw = cursor.fetchall()
+    sql = "SELECT * FROM user where username="+username
+    cursor = connection.cursor()
+    cursor.execute(sql)
     user = cursor.fetchall()
-    exist = len(cursor.fetchall())
     cursor.close()
     connection.close()
-    # print(passw)
-    print(user)
-    print(exist)
-    if(exist!=0):
-        return render_template('mypage.html', users = user)
-    else:
-        return render_template('login.html', users = user)
-
-        # return redirect(url_for('return_login'))
+    print(passw)
+    return render_template('login.html')
+    # if(password==passw):
+    #     return render_template('mypage.html', users = user)
+    # else:
+    #     return redirect(url_for('return_login'))
 
 
 if __name__ == '__main__':
