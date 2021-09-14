@@ -1,3 +1,5 @@
+import compare
+
 def MakeSetsumeibun(common, not_common, username2):
     return MakeCommonSetsumeibun(common, username2), MakeNotCommonSetsumeibun(not_common, username2)
 
@@ -92,5 +94,3 @@ def MakeNotCommonSetsumeibun(not_common, username2):
         for i in range(len(hobby)):
             kyotsu["setsumei"]["hobby"].append(username2 + "さんは" + hobby[i] + "が好きなようです。「" + hobby[i] + "が好きな理由は？」「いつから好きですか？」「最近いつしましたか？」")
     return kyotsu
-
-print(MakeSetsumeibun({"job":'エンジニア', "fav_food":"肉料理", "hobby":["スキー","サーフィン"]},{"hobby":["野球"]},"田中百合"))
