@@ -1,0 +1,2 @@
+create table IF not exists `rent_hist`
+(id int auto_increment primary key, varchar(64) not null, email varchar(100),birthplace varchar(100), job varchar(100), highschool varchar(100), university varchar(100), c_prefecture varchar(100), recent_shopping varchar(100), hobby_id int, enter_date DATE, CONSTRAINT fk_hooby_id FOREIGN KEY (hobby_id) REFERENCES hobby (id) ON DELETE RESTRICT ON UPDATE RESTRICT) DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
