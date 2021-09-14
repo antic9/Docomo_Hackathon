@@ -127,7 +127,7 @@ class compare_info:
     user = cursor.fetchall()
     cursor.close()
 
-    for i in range(len(user[1])):
+    for i in range(len(user[0])):
 
       # hobby
       if re.compile(r'^hobby').search(user[1].keys()[i]):
