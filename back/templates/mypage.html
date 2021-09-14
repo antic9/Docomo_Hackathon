@@ -42,7 +42,15 @@
 
     <main class= "container flex-shrink-0">
         <h1>マイページ</h1>
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <div class="my-3 p-5 bg-white rounded shadow-sm">
+            <h2>共有用URL</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="shareurl">
+                <button class="btn btn-outline-secondary" type="button" id="sharecopybutton">共有のためにコピー</button>
+            </div>
+        </div>
+        <div class="my-3 p-5 bg-white rounded shadow-sm">
+            <h2>自分の情報</h2>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">年齢　　　　　</label>
@@ -369,7 +377,16 @@
         </div>
     </footer>
     <script src = "static/js/selected.js">
-
+    </script>
+    <script>
+        url = "http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + {% username %} + "login";
+        window.onload = function(){
+            document.querySelector("#shareurl").value =　url;
+        }
+        document.querySelector("#sharecopybutton").onclick=function(){
+            document.querySelector("#shareurl").select();
+            document.execCommand("copy");
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
