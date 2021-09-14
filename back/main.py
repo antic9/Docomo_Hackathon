@@ -71,7 +71,7 @@ def index():
     print(len(user))
     user = user.pop('enter_date')
     if(len(user)!=0):
-        return render_template('mypage.html', users = user), jsonify(user_info = json.dumps(user))
+        return render_template('mypage.html', users = user)
     else:
         return render_template('login.html', users = user)
 
