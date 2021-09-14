@@ -45,10 +45,52 @@
         <div class="my-3 p-3 bg-white rounded shadow-sm">
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">ユーザネーム　</label>
+                </div>
+                <div class="col-auto">
+                    <input type="" name="username" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        登録時のユーザネーム
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">パスワード　　</label>
+                </div>
+                <div class="col-auto">
+                    <input type="" name="password" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        登録時のパスワード
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">名前　　　　　</label>
+                </div>
+                <div class="col-auto">
+                    <input type="" name="name" class="form-control" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">年齢　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <input type="" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="" name="age" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">
@@ -62,7 +104,7 @@
                     <label for="inputPassword6" class="col-form-label">出身校　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <input type="" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="" name="school" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">
@@ -76,54 +118,54 @@
                     <label for="inputPassword6" class="col-form-label">出身地　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>北海道</option>
-                        <option value=2>青森県</option>
-                        <option value=3>岩手県</option>
-                        <option value=4>宮城県</option>
-                        <option value=5>秋田県</option>
-                        <option value=6>山形県</option>
-                        <option value=7>福島県</option>
-                        <option value=8>茨城県</option>
-                        <option value=9>栃木県</option>
-                        <option value=10>群馬県</option>
-                        <option value=11>埼玉県</option>
-                        <option value=12>千葉県</option>
-                        <option value=13>東京都</option>
-                        <option value=14>神奈川県</option>
-                        <option value=15>新潟県</option>
-                        <option value=16>富山県</option>
-                        <option value=17>石川県</option>
-                        <option value=18>福井県</option>
-                        <option value=19>山梨県</option>
-                        <option value=20>長野県</option>
-                        <option value=21>岐阜県</option>
-                        <option value=22>静岡県</option>
-                        <option value=23>愛知県</option>
-                        <option value=24>三重県</option>
-                        <option value=25>滋賀県</option>
-                        <option value=26>京都府</option>
-                        <option value=27>大阪府</option>
-                        <option value=28>兵庫県</option>
-                        <option value=29>奈良県</option>
-                        <option value=30>和歌山県</option>
-                        <option value=31>鳥取県</option>
-                        <option value=32>島根県</option>
-                        <option value=33>岡山県</option>
-                        <option value=34>広島県</option>
-                        <option value=35>山口県</option>
-                        <option value=36>徳島県</option>
-                        <option value=37>香川県</option>
-                        <option value=38>愛媛県</option>
-                        <option value=39>高知県</option>
-                        <option value=40>福岡県</option>
-                        <option value=41>佐賀県</option>
-                        <option value=42>長崎県</option>
-                        <option value=43>熊本県</option>
-                        <option value=44>大分県</option>
-                        <option value=45>宮崎県</option>
-                        <option value=46>鹿児島県</option>
-                        <option value=47>沖縄県</option>
+                    <select class="form-select" aria-label="Default select example" name=birthplace>
+                        <option value=北海道>北海道</option>
+                        <option value=青森県>青森県</option>
+                        <option value=岩手県>岩手県</option>
+                        <option value=宮城県>宮城県</option>
+                        <option value=秋田県>秋田県</option>
+                        <option value=山形県>山形県</option>
+                        <option value=福島県>福島県</option>
+                        <option value=茨城県>茨城県</option>
+                        <option value=栃木県>栃木県</option>
+                        <option value=群馬県>群馬県</option>
+                        <option value=埼玉県>埼玉県</option>
+                        <option value=千葉県>千葉県</option>
+                        <option value=東京都>東京都</option>
+                        <option value=神奈川県>神奈川県</option>
+                        <option value=新潟県>新潟県</option>
+                        <option value=富山県>富山県</option>
+                        <option value=石川県>石川県</option>
+                        <option value=福井県>福井県</option>
+                        <option value=山梨県>山梨県</option>
+                        <option value=長野県>長野県</option>
+                        <option value=岐阜県>岐阜県</option>
+                        <option value=静岡県>静岡県</option>
+                        <option value=愛知県>愛知県</option>
+                        <option value=三重県>三重県</option>
+                        <option value=滋賀県>滋賀県</option>
+                        <option value=京都府>京都府</option>
+                        <option value=大阪府>大阪府</option>
+                        <option value=兵庫県>兵庫県</option>
+                        <option value=奈良県>奈良県</option>
+                        <option value=和歌山県>和歌山県</option>
+                        <option value=鳥取県>鳥取県</option>
+                        <option value=島根県>島根県</option>
+                        <option value=岡山県>岡山県</option>
+                        <option value=広島県>広島県</option>
+                        <option value=山口県>山口県</option>
+                        <option value=徳島県>徳島県</option>
+                        <option value=香川県>香川県</option>
+                        <option value=愛媛県>愛媛県</option>
+                        <option value=高知県>高知県</option>
+                        <option value=福岡県>福岡県</option>
+                        <option value=佐賀県>佐賀県</option>
+                        <option value=長崎県>長崎県</option>
+                        <option value=熊本県>熊本県</option>
+                        <option value=大分県>大分県</option>
+                        <option value=宮崎県>宮崎県</option>
+                        <option value=鹿児島県>鹿児島県</option>
+                        <option value=沖縄県>沖縄県</option>
                     </select>
                 </div>
             </div>
@@ -133,54 +175,54 @@
                     <label for="inputPassword6" class="col-form-label">居住地　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>北海道</option>
-                        <option value=2>青森県</option>
-                        <option value=3>岩手県</option>
-                        <option value=4>宮城県</option>
-                        <option value=5>秋田県</option>
-                        <option value=6>山形県</option>
-                        <option value=7>福島県</option>
-                        <option value=8>茨城県</option>
-                        <option value=9>栃木県</option>
-                        <option value=10>群馬県</option>
-                        <option value=11>埼玉県</option>
-                        <option value=12>千葉県</option>
-                        <option value=13>東京都</option>
-                        <option value=14>神奈川県</option>
-                        <option value=15>新潟県</option>
-                        <option value=16>富山県</option>
-                        <option value=17>石川県</option>
-                        <option value=18>福井県</option>
-                        <option value=19>山梨県</option>
-                        <option value=20>長野県</option>
-                        <option value=21>岐阜県</option>
-                        <option value=22>静岡県</option>
-                        <option value=23>愛知県</option>
-                        <option value=24>三重県</option>
-                        <option value=25>滋賀県</option>
-                        <option value=26>京都府</option>
-                        <option value=27>大阪府</option>
-                        <option value=28>兵庫県</option>
-                        <option value=29>奈良県</option>
-                        <option value=30>和歌山県</option>
-                        <option value=31>鳥取県</option>
-                        <option value=32>島根県</option>
-                        <option value=33>岡山県</option>
-                        <option value=34>広島県</option>
-                        <option value=35>山口県</option>
-                        <option value=36>徳島県</option>
-                        <option value=37>香川県</option>
-                        <option value=38>愛媛県</option>
-                        <option value=39>高知県</option>
-                        <option value=40>福岡県</option>
-                        <option value=41>佐賀県</option>
-                        <option value=42>長崎県</option>
-                        <option value=43>熊本県</option>
-                        <option value=44>大分県</option>
-                        <option value=45>宮崎県</option>
-                        <option value=46>鹿児島県</option>
-                        <option value=47>沖縄県</option>
+                    <select class="form-select" aria-label="Default select example" name=residence>
+                        <option value=北海道>北海道</option>
+                        <option value=青森県>青森県</option>
+                        <option value=岩手県>岩手県</option>
+                        <option value=宮城県>宮城県</option>
+                        <option value=秋田県>秋田県</option>
+                        <option value=山形県>山形県</option>
+                        <option value=福島県>福島県</option>
+                        <option value=茨城県>茨城県</option>
+                        <option value=栃木県>栃木県</option>
+                        <option value=群馬県>群馬県</option>
+                        <option value=埼玉県>埼玉県</option>
+                        <option value=千葉県>千葉県</option>
+                        <option value=東京都>東京都</option>
+                        <option value=神奈川県>神奈川県</option>
+                        <option value=新潟県>新潟県</option>
+                        <option value=富山県>富山県</option>
+                        <option value=石川県>石川県</option>
+                        <option value=福井県>福井県</option>
+                        <option value=山梨県>山梨県</option>
+                        <option value=長野県>長野県</option>
+                        <option value=岐阜県>岐阜県</option>
+                        <option value=静岡県>静岡県</option>
+                        <option value=愛知県>愛知県</option>
+                        <option value=三重県>三重県</option>
+                        <option value=滋賀県>滋賀県</option>
+                        <option value=京都府>京都府</option>
+                        <option value=大阪府>大阪府</option>
+                        <option value=兵庫県>兵庫県</option>
+                        <option value=奈良県>奈良県</option>
+                        <option value=和歌山県>和歌山県</option>
+                        <option value=鳥取県>鳥取県</option>
+                        <option value=島根県>島根県</option>
+                        <option value=岡山県>岡山県</option>
+                        <option value=広島県>広島県</option>
+                        <option value=山口県>山口県</option>
+                        <option value=徳島県>徳島県</option>
+                        <option value=香川県>香川県</option>
+                        <option value=愛媛県>愛媛県</option>
+                        <option value=高知県>高知県</option>
+                        <option value=福岡県>福岡県</option>
+                        <option value=佐賀県>佐賀県</option>
+                        <option value=長崎県>長崎県</option>
+                        <option value=熊本県>熊本県</option>
+                        <option value=大分県>大分県</option>
+                        <option value=宮崎県>宮崎県</option>
+                        <option value=鹿児島県>鹿児島県</option>
+                        <option value=沖縄県>沖縄県</option>
                     </select>
                 </div>
             </div>
@@ -190,23 +232,23 @@
                     <label for="inputPassword6" class="col-form-label">職種　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>学生</option>
-                        <option value=2>営業</option>
-                        <option value=3>販売</option>
-                        <option value=4>飲食・フード</option>
-                        <option value=5>サービス・警備・清掃</option>
-                        <option value=6>イベント・レジャー・娯楽</option>
-                        <option value=7>教育・スポーツ</option>
-                        <option value=8>理・美容</option>
-                        <option value=9>医療・介護・福祉</option>
-                        <option value=10>ドライバー・配達</option>
-                        <option value=11>事務・オフィスワーク</option>
-                        <option value=12>製造・工場</option>
-                        <option value=13>IT・エンジニア</option>
-                        <option value=14>編集・出版</option>
-                        <option value=15>土木・建築・農水産</option>
-                        <option value=16>その他</option>
+                    <select class="form-select" aria-label="Default select example" name="job">
+                        <option value=学生>学生</option>
+                        <option value=営業>営業</option>
+                        <option value=販売>販売</option>
+                        <option value=飲食・フード>飲食・フード</option>
+                        <option value=サービス・警備・清掃>サービス・警備・清掃</option>
+                        <option value=イベント・レジャー・娯楽>イベント・レジャー・娯楽</option>
+                        <option value=教育・スポーツ>教育・スポーツ</option>
+                        <option value=理・美容>理・美容</option>
+                        <option value=医療・介護・福祉>医療・介護・福祉</option>
+                        <option value=ドライバー・配達>ドライバー・配達</option>
+                        <option value=事務・オフィスワーク>事務・オフィスワーク</option>
+                        <option value=製造・工場>製造・工場</option>
+                        <option value=IT・エンジニア>IT・エンジニア</option>
+                        <option value=編集・出版>編集・出版</option>
+                        <option value=土木・建築・農水産>土木・建築・農水産</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
@@ -216,19 +258,19 @@
                     <label for="inputPassword6" class="col-form-label">最近行った場所</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>公園</option>
-                        <option value=2>遊園地</option>
-                        <option value=3>動物園</option>
-                        <option value=4>博物館</option>
-                        <option value=5>果樹園</option>
-                        <option value=6>水族館</option>
-                        <option value=7>観光地</option>
-                        <option value=8>プール・海</option>
-                        <option value=9>キャンプ場</option>
-                        <option value=10>スキー場</option>
-                        <option value=11>県外のどこか</option>
-                        <option value=12>その他</option>
+                    <select class="form-select" aria-label="Default select example" name="place">
+                        <option value=公園>公園</option>
+                        <option value=遊園地>遊園地</option>
+                        <option value=動物園>動物園</option>
+                        <option value=博物館>博物館</option>
+                        <option value=果樹園>果樹園</option>
+                        <option value=水族館>水族館</option>
+                        <option value=観光地>観光地</option>
+                        <option value=プール・海>プール・海</option>
+                        <option value=キャンプ場>キャンプ場</option>
+                        <option value=スキー場>スキー場</option>
+                        <option value=県外のどこか>県外のどこか</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
@@ -238,13 +280,13 @@
                     <label for="inputPassword6" class="col-form-label">最近買ったもの</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>衣服</option>
-                        <option value=2>電化製品</option>
-                        <option value=3>ゲーム</option>
-                        <option value=4>日用品</option>
-                        <option value=5>食べ物</option>
-                        <option value=6>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=buy>
+                        <option value=衣服>衣服</option>
+                        <option value=電化製品>電化製品</option>
+                        <option value=ゲーム>ゲーム</option>
+                        <option value=日用品>日用品</option>
+                        <option value=食べ物>食べ物</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
@@ -254,13 +296,13 @@
                     <label for="inputPassword6" class="col-form-label">好きな食べ物　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>和食</option>
-                        <option value=2>洋食</option>
-                        <option value=3>スイーツ</option>
-                        <option value=4>肉料理</option>
-                        <option value=5>鍋料理</option>
-                        <option value=6>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=food>
+                        <option value=和食>和食</option>
+                        <option value=洋食>洋食</option>
+                        <option value=スイーツ>スイーツ</option>
+                        <option value=肉料理>肉料理</option>
+                        <option value=鍋料理>鍋料理</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
@@ -270,43 +312,43 @@
                     <label for="inputPassword6" class="col-form-label">好きな映画　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>アクション</option>
-                        <option value=2>恋愛</option>
-                        <option value=3>SF</option>
-                        <option value=4>アドベンチャー</option>
-                        <option value=5>ファンタジー</option>
-                        <option value=6>ホラー</option>
-                        <option value=7>サスペンス</option>
-                        <option value=8>ミステリー</option>
-                        <option value=9>コメディ</option>
-                        <option value=10>日常</option>
-                        <option value=11>スポーツ</option>
-                        <option value=12>ロボット</option>
-                        <option value=13>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=movie>
+                        <option value=アクション>アクション</option>
+                        <option value=恋愛>恋愛</option>
+                        <option value=SF>SF</option>
+                        <option value=アドベンチャー>アドベンチャー</option>
+                        <option value=ファンタジー>ファンタジー</option>
+                        <option value=ホラー>ホラー</option>
+                        <option value=サスペンス>サスペンス</option>
+                        <option value=ミステリー>ミステリー</option>
+                        <option value=コメディ>コメディ</option>
+                        <option value=日常>日常</option>
+                        <option value=スポーツ>スポーツ</option>
+                        <option value=ロボット>ロボット</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
 
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
-                    <label for="inputPassword6" class="col-form-label">好きなアニメ　</label>
+                    <label for="inputPassword6" class="col-form-label" >好きなアニメ　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>アクション</option>
-                        <option value=2>恋愛</option>
-                        <option value=3>SF</option>
-                        <option value=4>アドベンチャー</option>
-                        <option value=5>ファンタジー</option>
-                        <option value=6>ホラー</option>
-                        <option value=7>サスペンス</option>
-                        <option value=8>ミステリー</option>
-                        <option value=9>コメディ</option>
-                        <option value=10>日常</option>
-                        <option value=11>スポーツ</option>
-                        <option value=12>ロボット</option>
-                        <option value=13>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=anime> 
+                        <option value=アクション>アクション</option>
+                        <option value=恋愛>恋愛</option>
+                        <option value=SF>SF</option>
+                        <option value=アドベンチャー>アドベンチャー</option>
+                        <option value=ファンタジー>ファンタジー</option>
+                        <option value=ホラー>ホラー</option>
+                        <option value=サスペンス>サスペンス</option>
+                        <option value=ミステリー>ミステリー</option>
+                        <option value=コメディ>コメディ</option>
+                        <option value=日常>日常</option>
+                        <option value=スポーツ>スポーツ</option>
+                        <option value=ロボット>ロボット</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
@@ -316,48 +358,48 @@
                     <label for="inputPassword6" class="col-form-label">趣味　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>運動</option>
-                        <option value=2>キャンプ</option>
-                        <option value=3>スキー</option>
-                        <option value=4>サーフィン</option>
-                        <option value=5>ドライブ</option>
-                        <option value=6>ゲーム</option>
-                        <option value=7>読書</option>
-                        <option value=8>映画鑑賞</option>
-                        <option value=9>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=hobby1>
+                        <option value=運動>運動</option>
+                        <option value=キャンプ>キャンプ</option>
+                        <option value=スキー>スキー</option>
+                        <option value=サーフィン>サーフィン</option>
+                        <option value=ドライブ>ドライブ</option>
+                        <option value=ゲーム>ゲーム</option>
+                        <option value=読書>読書</option>
+                        <option value=映画鑑賞>映画鑑賞</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>運動</option>
-                        <option value=2>キャンプ</option>
-                        <option value=3>スキー</option>
-                        <option value=4>サーフィン</option>
-                        <option value=5>ドライブ</option>
-                        <option value=6>ゲーム</option>
-                        <option value=7>読書</option>
-                        <option value=8>映画鑑賞</option>
-                        <option value=9>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=hobby2>
+                        <option value=運動>運動</option>
+                        <option value=キャンプ>キャンプ</option>
+                        <option value=スキー>スキー</option>
+                        <option value=サーフィン>サーフィン</option>
+                        <option value=ドライブ>ドライブ</option>
+                        <option value=ゲーム>ゲーム</option>
+                        <option value=読書>読書</option>
+                        <option value=映画鑑賞>映画鑑賞</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value=1>運動</option>
-                        <option value=2>キャンプ</option>
-                        <option value=3>スキー</option>
-                        <option value=4>サーフィン</option>
-                        <option value=5>ドライブ</option>
-                        <option value=6>ゲーム</option>
-                        <option value=7>読書</option>
-                        <option value=8>映画鑑賞</option>
-                        <option value=9>その他</option>
+                    <select class="form-select" aria-label="Default select example" name=hobby3>
+                        <option value=運動>運動</option>
+                        <option value=キャンプ>キャンプ</option>
+                        <option value=スキー>スキー</option>
+                        <option value=サーフィン>サーフィン</option>
+                        <option value=ドライブ>ドライブ</option>
+                        <option value=ゲーム>ゲーム</option>
+                        <option value=読書>読書</option>
+                        <option value=映画鑑賞>映画鑑賞</option>
+                        <option value=その他>その他</option>
                     </select>
                 </div>
             </div>
 
             
-            <button type="button" class="btn btn-outline-secondary">登録！</button>
+            <button type="button" class="btn btn-outline-secondary" name = "register">登録！</button>
         </div>
     </main>
 
@@ -368,29 +410,7 @@
             &copy; 2021　共通項なくてもEじゃん
         </div>
     </footer>
-    <!-- {{/*  <script> -->
-    <!-- // MathJax = {
-    //     loader: {
-    //         load: ['[tex]/physics']
-    //     },
-    //     tex: {
-    //         tags: 'ams',
-    //         inlineMath: [['$', '$']],
-    //         displayMath: [['$$','$$']],
-    //         processEscapes: true,
-    //         packages: {'[+]': ['physics']},
-    //         processRefs: true
-    //     },
-    //     chtml: {
-    //         matchFontHeight: false,
-    //     },
-    //     svg: {
-    //         fontCache: 'global'
-    //     }
-    // };
-    </script> -->
-    <!-- <script src="//polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>  */}} -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
