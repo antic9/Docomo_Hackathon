@@ -68,7 +68,7 @@ def index():
     # print(passw)
     print(user)
     print(len(user))
-    if(exist!=0):
+    if(len(user)!=0):
         return render_template('mypage.html', users = user)
     else:
         return render_template('login.html', users = user)
