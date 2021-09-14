@@ -51,11 +51,11 @@ def index():
     username=request.form["username"]
     password=request.form["password"]
     
-    sql = "SELECT password FROM user where userid="+username
+    sql = "SELECT password FROM user where username="+username
     cursor = connection.cursor()
     cursor.execute(sql)
     passw = cursor.fetchall()
-    sql = "SELECT * FROM user where userid="+username
+    sql = "SELECT * FROM user where username="+username
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
