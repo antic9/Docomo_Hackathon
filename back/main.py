@@ -20,7 +20,7 @@ def getConnection():
 
 # class DATABASENAME(db.Model):
 #   __tablename__ = 'DATABASENAME'
-@app.route('/logingin/<username>', methods = ['GET', 'POST'])
+@app.route('/<username>/logingin', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
     myusername = request.form["username"]
