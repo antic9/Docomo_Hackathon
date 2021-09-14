@@ -137,17 +137,15 @@ class compare_info:
       # print(type(keys1))
 
       # hobby
-      if i<=12 and i>=14:
+      if i<=14 and i>=12:
         b_len = len(common_hb)
         for j in range(len(user[0])):
-          if j<=12 and j>=14:
+          if j<=14 and j>=12:
             if user[0][keys1[i]] == user[1][keys2[j]]:
               common_hb.append(user[0][keys1[i]])
               keys1.pop(i)
-              keys2.pop(j)
-        for k in range(len(keys1)):    
-          not_common_hb.append(user[0][keys1[k]])
-          not_common_hb.append(user[1][keys2[i]])
+              keys2.pop(j)  
+        not_common_hb.append(user[1][keys2[i]])
         print(common_hb)
         print(not_common_hb)
 
@@ -155,10 +153,10 @@ class compare_info:
 
       # other
       else:
-        if user[0][i] == user[0][i]:
-          common[user[0].keys()[i]] = user[1][i]
+        if user[0][keys1[i]] == user[1][keys2[i]]:
+          common[keys1[i]] = user[0][keys1[i]]
         else:
-          not_common[user[0].keys()[i]] = user[1][i]
+          not_common[keys1[i]] = user[0][keys1[i]]
 
     common['hobby'] = common_hb
     not_common['hobby'] = not_common_hb
