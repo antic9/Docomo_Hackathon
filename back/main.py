@@ -21,7 +21,7 @@ def getConnection():
 @app.route('/<username>', methods = ['GET', 'POST'])
 def login(username):
     connection = getConnection()
-    sql = "SELECT name FROM user WHERE userid ="+username
+    sql = "SELECT name FROM user WHERE usename ="+username
     cursor = connection.cursor()
     cursor.execute(sql)
     user = cursor.fetchall()
