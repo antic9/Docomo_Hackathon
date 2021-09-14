@@ -69,7 +69,7 @@ def index():
     # print(passw)
     print(user)
     print(len(user))
-    del user['enter_date']
+    # del user['enter_date']
     if(len(user)!=0):
         return render_template('mypage.html', users = user)
     else:
