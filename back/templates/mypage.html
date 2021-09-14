@@ -379,7 +379,7 @@
     <script src = "static/js/selected.js">
     </script>
     <script>
-        url = "http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + {% user.usename %} + "login";
+        url = "http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + {% users.usename %} + "login";
         window.onload = function(){
             document.querySelector("#shareurl").value =　url;
         }
