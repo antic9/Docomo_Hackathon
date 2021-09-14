@@ -51,6 +51,7 @@ def index():
     username=request.form["username"]
     password=request.form["password"]
     print(username)
+    print(password)
     # sql = "SELECT password FROM user where usename=%s AND password = %s"
     # cursor = connection.cursor()
     # cursor.execute(sql,(username,password))
