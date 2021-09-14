@@ -134,7 +134,7 @@ class compare_info:
       keys2 = list(user[1].keys())
 
     
-      print(type(keys))
+      # print(type(keys1))
 
       # hobby
       if i<=12 and i>=14:
