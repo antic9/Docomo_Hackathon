@@ -26,6 +26,7 @@ def login(username):
     myusername = request.form["username"]
     common, not_common = com.compare(myusername,username)
     print(common)
+    print(not_common)
     kyotsuKoumokumeis = common['koumokumei']
     kyotsuSetsumeis = common['setumei']
     hikyotsuKoumokumeis = not_common['koumokumei']
