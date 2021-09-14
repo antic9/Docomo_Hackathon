@@ -24,7 +24,7 @@ def getConnection():
 )
     return connection
 class compare_info:
-  def MakeCommonInfoSentence(common, username2):
+  def MakeCommonInfoSentence(self,common, username2):
     kyotsu = {"koumokumei":{},"setsumei":{}}
     birthplace = common.get("birthplace")
     job = common.get("job")
@@ -69,7 +69,7 @@ class compare_info:
         for i in range(len(hobby)):
             kyotsu["setsumei"]["hobby"].append(username2 + "さんも" + hobby[i] + "が好きなようです。「" + hobby[i] + "が好きな理由は？」「いつから好きですか？」「最近いつしましたか？」")
     return kyotsu
-  def MakeUnCommonInfoSentence(not_common, username2):
+  def MakeUnCommonInfoSentence(self,not_common, username2):
     kyotsu = {"koumokumei":{},"setsumei":{}}
     birthplace = not_common.get("birthplace")
     job = not_common.get("job")
@@ -156,7 +156,7 @@ class compare_info:
         if user[0][keys1[i]] == user[1][keys2[i]]:
           common[keys1[i]] = user[0][keys1[i]]
         else:
-          not_common[keys1[i]] = user[0][keys1[i]]
+          not_common[keys1[i]] = user[1][keys1[i]]
 
     common['hobby'] = common_hb
     not_common['hobby'] = not_common_hb
