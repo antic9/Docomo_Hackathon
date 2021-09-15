@@ -64,7 +64,7 @@ def redirect_login(username):
 def return_login():
     return render_template('login.html',message="")
 
-@app.route('/add',methods = ['GET', 'POST'])
+@app.route('/change',methods = ['GET', 'POST'])
 def add_info():
     return render_template('mypage.html',message="登録しました")
 
