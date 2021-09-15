@@ -119,15 +119,20 @@ class compare_info:
     not_common = {}
     common_hb = []
     not_common_hb = []
+    user = []
 
     usernames = (username1,username2)
     print(username1)
     print(username2)
     connection = getConnection()
     cursor = connection.cursor()
-    cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
-    user = cursor.fetchall()
+    cursor.execute("SELECT * FROM user WHERE usename=%s", username1)
+    user1 = cursor.fetchall()
+    cursor.execute("SELECT * FROM user WHERE usename=%s", username2)
+    user2 = cursor.fetchall()
     cursor.close()
+    user.append(user1[0])
+    user.append(user2[0])
     print(type(user))
     for i in range(len(user[0])):
       keys1 = list(user[0].keys())
