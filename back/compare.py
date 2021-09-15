@@ -134,9 +134,16 @@ class compare_info:
     cursor2.execute("SELECT * FROM user WHERE usename=%s", username2)
     user2 = cursor2.fetchall()
     cursor2.close()
+    connection = getConnection()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
+    user3 = cursor.fetchall()
+    cursor.close()
+
     user.append(user1[0])
     user.append(user2[0])
     print(user)
+    print(user3)
     for i in range(len(user[0])):
       keys1 = list(user[0].keys())
       keys2 = list(user[1].keys())
