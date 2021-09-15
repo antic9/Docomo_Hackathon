@@ -66,7 +66,7 @@ def return_login():
 
 @app.route('/change',methods = ['GET', 'POST'])
 def add_info():
-    return message="登録しました"
+    return render_template('mypage.html',message="登録しました")
 
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
