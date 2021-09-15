@@ -66,7 +66,21 @@ def return_login():
 
 @app.route('/change',methods = ['GET', 'POST'])
 def add_info():
-    return render_template('mypage.html',message="登録しました")
+    name = request.form["name"]
+    connection = getConnection()
+    sql = "SELECT * FROM user where name=%s"
+    cursor = connection.cursor()
+    print(sql)
+    cursor.execute(sql,(name))
+    user = cursor.fetchall()
+    exist = len(cursor.fetchall())
+    cursor.close()
+    connection.close()
+    user_info=user[0]
+
+    user_info['share_url']="http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + user_info["usename"] + "/login"
+    
+    return render_template('mypage.html',users = user_info,message="登録しました")
 
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
