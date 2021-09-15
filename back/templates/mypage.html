@@ -35,6 +35,11 @@
 
 
     <main class= "container flex-shrink-0">
+        {% if message != '' %}
+        <div class="alert alert-danger" role="alert">
+            {{message}}
+        </div>
+        {% endif %}
         <h1>マイページ</h1>
         <div class="my-3 p-5 bg-white rounded shadow-sm">
             <h2>共有用URL</h2>
@@ -43,14 +48,14 @@
                 <button class="btn btn-outline-secondary" type="button" id="sharecopybutton">共有のためにコピー</button>
             </div>
         </div>
-        <div class="my-3 p-5 bg-white rounded shadow-sm">
+        <form class="my-3 p-5 bg-white rounded shadow-sm"method="POST"action="change">
             <h2>自分の情報</h2>
             <div class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="inputPassword6" class="col-form-label">年齢　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <input type="" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input name = "age" type="" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">
@@ -64,7 +69,7 @@
                     <label for="inputPassword6" class="col-form-label">出身校　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <input type="" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                    <input type="" name = "university" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
                 </div>
                 <div class="col-auto">
                     <span id="passwordHelpInline" class="form-text">
@@ -78,7 +83,7 @@
                     <label for="inputPassword6" class="col-form-label">出身地　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "birthplace" aria-label="Default select example">
                         <option value=1>北海道</option>
                         <option value=2>青森県</option>
                         <option value=3>岩手県</option>
@@ -135,7 +140,7 @@
                     <label for="inputPassword6" class="col-form-label">居住地　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "c_prefecture"aria-label="Default select example">
                         <option value=1>北海道</option>
                         <option value=2>青森県</option>
                         <option value=3>岩手県</option>
@@ -192,7 +197,7 @@
                     <label for="inputPassword6" class="col-form-label">職種　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "job"aria-label="Default select example">
                         <option value=1>学生</option>
                         <option value=2>営業</option>
                         <option value=3>販売</option>
@@ -218,7 +223,7 @@
                     <label for="inputPassword6" class="col-form-label">最近行った場所</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "visit"aria-label="Default select example">
                         <option value=1>公園</option>
                         <option value=2>遊園地</option>
                         <option value=3>動物園</option>
@@ -240,7 +245,7 @@
                     <label for="inputPassword6" class="col-form-label">最近買ったもの</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "recent_shopping"aria-label="Default select example">
                         <option value=1>衣服</option>
                         <option value=2>電化製品</option>
                         <option value=3>ゲーム</option>
@@ -256,7 +261,7 @@
                     <label for="inputPassword6" class="col-form-label">好きな食べ物　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "fav_food"aria-label="Default select example">
                         <option value=1>和食</option>
                         <option value=2>洋食</option>
                         <option value=3>スイーツ</option>
@@ -272,7 +277,7 @@
                     <label for="inputPassword6" class="col-form-label">好きな映画　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "fav_movie"aria-label="Default select example">
                         <option value=1>アクション</option>
                         <option value=2>恋愛</option>
                         <option value=3>SF</option>
@@ -295,7 +300,7 @@
                     <label for="inputPassword6" class="col-form-label">好きなアニメ　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "fav_anime"aria-label="Default select example">
                         <option value=1>アクション</option>
                         <option value=2>恋愛</option>
                         <option value=3>SF</option>
@@ -318,7 +323,7 @@
                     <label for="inputPassword6" class="col-form-label">趣味　　　　　</label>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "hobby1"aria-label="Default select example">
                         <option value=1>運動</option>
                         <option value=2>キャンプ</option>
                         <option value=3>スキー</option>
@@ -331,7 +336,7 @@
                     </select>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "hobbby2" aria-label="Default select example">
                         <option value=1>運動</option>
                         <option value=2>キャンプ</option>
                         <option value=3>スキー</option>
@@ -344,7 +349,7 @@
                     </select>
                 </div>
                 <div class="col-auto">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name = "hobby3" aria-label="Default select example">
                         <option value=1>運動</option>
                         <option value=2>キャンプ</option>
                         <option value=3>スキー</option>
@@ -359,8 +364,8 @@
             </div>
 
             
-            <button type="button" class="btn btn-outline-secondary">登録！</button>
-        </div>
+            <button type="submit" class="btn btn-outline-secondary">登録！</button>
+        </form>
     </main>
 
 

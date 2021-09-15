@@ -64,6 +64,10 @@ def redirect_login(username):
 def return_login():
     return render_template('login.html',message="")
 
+@app.route('/add')
+def add_info():
+    return render_template('mypage.html',message="登録しました")
+
 @app.route('/logingin', methods = ['GET', 'POST'])
 def index():
     print("connected")
@@ -94,7 +98,7 @@ def index():
         print(user_info)
         user_info['share_url']="http://ec2-18-222-210-94.us-east-2.compute.amazonaws.com:5000/"  + user_info["usename"] + "/login"
         print((user))
-        return render_template('mypage.html', users = user_info)
+        return render_template('mypage.html', users = user_info,message="")
     else:
         return render_template('login.html',message="wrong username or password")
 
