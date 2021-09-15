@@ -128,7 +128,7 @@ class compare_info:
     cursor.execute("SELECT * FROM user WHERE usename=%s OR usename=%s", usernames)
     user = cursor.fetchall()
     cursor.close()
-    print(user)
+    print(type(user))
     for i in range(len(user[0])):
       keys1 = list(user[0].keys())
       keys2 = list(user[1].keys())
