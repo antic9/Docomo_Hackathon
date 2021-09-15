@@ -68,6 +68,21 @@ def return_login():
 def add_info():
     name = request.form["name"]
     connection = getConnection()
+    myage = request.form["age"]
+    myuniversity = request.form["university"]
+    mybirthplace = request.form["birthplace"]
+    myc_prefectire = request.form["c_prefecture"]
+    myjob = request.form["job"]
+    myvisit = request.form["visit"]
+    myrecent_shopping = request.form["recent_shopping"]
+    myfav_food = request.form["fav_food"]
+    myfav_movie = request.form["fav_movie"]
+    myfav_anime = request.form["fav_anime"]
+    myhobby1 = request.form["hobby1"]
+    myhobby1 = request.form["hobby2"]
+    myhobby1 = request.form["hobby3"]
+    print(myhobby1)
+    connection = getConnection()
     sql = "SELECT * FROM user where name=%s"
     cursor = connection.cursor()
     print(sql)
