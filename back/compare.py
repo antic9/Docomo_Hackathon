@@ -160,7 +160,8 @@ class compare_info:
               common_hb.append(user[0][keys1[i]])
               keys1.pop(i)
               keys2.pop(j)  
-        not_common_hb.append(user[1][keys2[i]])
+        if(user[1][keys2[i]]!=None):
+            not_common_hb.append(user[1][keys2[i]])
         print(common_hb)
         print(not_common_hb)
 
