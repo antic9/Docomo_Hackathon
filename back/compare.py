@@ -128,6 +128,8 @@ class compare_info:
     cursor = connection.cursor()
     cursor.execute("SELECT * FROM user WHERE usename=%s", username1)
     user1 = cursor.fetchall()
+    cursor.close()
+    cursor = connection.cursor()
     cursor.execute("SELECT * FROM user WHERE usename=%s", username2)
     user2 = cursor.fetchall()
     cursor.close()
